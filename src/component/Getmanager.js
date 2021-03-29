@@ -9,14 +9,14 @@ export default class Loginmanager extends Component {
         const data = {
             username: 'admin',
             password: 'qy627398',
-            referer: "localhost:3000",
+            referer: "localhost",
             expiration: 60,
             f: "json"
         }
         const params = qs.stringify(data);//将对象序列化成URL的形式，以&进行拼接
         Axios.post('https://p15v.arcgisonline.cn/portal/sharing/rest/generateToken', params)
             .then(
-               (res) => {PubSub.publish('token',{tokenmanager:res.data.token});}//将token发布
+                (res) => {PubSub.publish('token',{tokenmanager:res.data.token});}//将token发布
             )
     }
 

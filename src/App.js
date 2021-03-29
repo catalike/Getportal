@@ -4,6 +4,8 @@ import GetportalInfo from "./component/GetportalInfo"
 import AddGroups from "./component/AddGroups";
 import Getmanager from "./component/Getmanager"
 import GetItem from "./component/GetItem";
+import GetGroupsItem from "./component/GetGroupsItem";
+import Payaddgroups from "./component/Payaddgroups"
 
 export default class App extends Component{
 
@@ -15,6 +17,8 @@ render(){
      <AddGroups/>
      <Getmanager/>
      <GetItem/>
+     <GetGroupsItem/>
+     <Payaddgroups/>
     </div>
         )
    }

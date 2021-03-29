@@ -25,7 +25,7 @@ export default class Login extends Component {
           password: this.state.password,
           //username: 'Product',
           //password: 'Esri1234ArcGIS',
-          referer: "localhost:3000",
+          referer: "localhost",
           expiration: 60,
           f: "json"
       }

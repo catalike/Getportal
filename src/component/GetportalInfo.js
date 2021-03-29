@@ -19,13 +19,12 @@ export default class PortalInfo extends Component{
         }
 
         const params=qs.stringify(data);
-        Axios.post('https://esrichina3d.arcgisonline.cn/portal/sharing/community/self', params)
+        Axios.post('https://p15v.arcgisonline.cn/portal/sharing/community/self', params)
             .then((res)=> {
                  const {groups}=res.data
                  this.setState({groups})//将groups数组传入state
+                PubSub.publish('groups',{groups:this.state.groups});
                 })
-
-
     }
 
     render(){

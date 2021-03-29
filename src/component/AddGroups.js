@@ -6,8 +6,8 @@ import PubSub from "pubsub-js";
 export default class AddGroups extends Component{
 
 componentDidMount() {
-        PubSub.subscribe('token',(msg,tokenmanager)=> this.setState(tokenmanager))//订阅Getinfo发布的token
-    PubSub.subscribe('users',(msg,users)=> this.setState(users))//订阅Getinfo发布的token
+        PubSub.subscribe('token',(msg,tokenmanager)=> this.setState(tokenmanager))//订阅Getmanager发布的token
+    PubSub.subscribe('users',(msg,users)=> this.setState(users))//订阅Getinfo发布的users
     }
 
 postusers =()=> {
